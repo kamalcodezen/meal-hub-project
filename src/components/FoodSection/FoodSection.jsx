@@ -1,5 +1,6 @@
 import React, { use } from "react";
 import Food from "./Food";
+import "./FoodSection.css";
 
 const FoodSection = ({ foodPromise }) => {
   const foodApi = use(foodPromise);
@@ -8,11 +9,21 @@ const FoodSection = ({ foodPromise }) => {
   return (
     <div>
       <h1>Food Section</h1>
+      
+      <div style={{ width: "75%" }} className="food-container-parent">
+        <div className="food-container">
+          {allFood.map((food) => (
+            <Food food={food}></Food>
+          ))}
+        </div>
 
-      <div>
-        {allFood.map((food) => (
-          <Food food={food}></Food>
-        ))}
+        <div style={{ width: "25%" }} className="add-cart">
+         
+         
+
+
+         
+        </div>
       </div>
     </div>
   );

@@ -15,11 +15,15 @@ function App() {
 
   return (
     <>
-      <Navbar></Navbar>
+      <header>
+        <Navbar></Navbar>
+      </header>
 
-      <Suspense fallback={<h1>Food Data Loading.....</h1>}>
-        <FoodSection foodPromise={foodPromise}></FoodSection>
-      </Suspense>
+      <main>
+        <Suspense fallback={<h1>Food Data Loading.....</h1>}>
+          <FoodSection foodPromise={foodPromise}></FoodSection>
+        </Suspense>
+      </main>
     </>
   );
 }
