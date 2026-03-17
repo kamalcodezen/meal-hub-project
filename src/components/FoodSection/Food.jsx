@@ -2,12 +2,14 @@ import React from "react";
 
 import "./Food.css";
 
-const Food = ({ food }) => {
-  console.log(food);
+const Food = ({ food,handleDisplayCard }) => {
+  // console.log(food);
+
+
 
   return (
     <div >
-      
+
       <div>
         <div className="food-img">
           <img src={food.strMealThumb} alt="" />
@@ -19,7 +21,7 @@ const Food = ({ food }) => {
         </div>
 
         <span>Area: {food.strArea}</span>
-        <button className="food-btn">Add Cart</button>
+        <button className="food-btn" onClick={()=>{handleDisplayCard(food)}} >Add Cart</button>
       </div>
 
     </div>

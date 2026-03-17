@@ -1,21 +1,21 @@
 .food-container {
     display: grid;
+
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    place-items: center;
-
-border: 2px solid yellowgreen;
+    /* place-items: center; */
+    border: 2px solid yellowgreen;
 }
 
 .food-container-parent {
     display: flex;
-    width: 900px;
-    margin: 20px auto;
+    max-width: 1000px;
+    margin: 100px auto;
     gap: 10px;
 }
 
 
-.add-cart{
-background-color: rgba(137, 43, 226, 0.364);
+.add-cart {
+    background-color: rgba(137, 43, 226, 0.364);
 
 }
