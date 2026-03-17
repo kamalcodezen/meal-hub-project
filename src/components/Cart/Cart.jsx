@@ -1,22 +1,21 @@
-import React, { useState } from "react";
-
-const Cart = (cart) => {
-
-
+const Cart = ({ cart, removeCard }) => {
   return (
     <div>
       <div>
         <div className="food-img">
-          <img src={cart.cart.strMealThumb} alt="" />
+          <img src={cart.strMealThumb} alt="" />
         </div>
         {/* details*/}
         <div>
-          <h3>Name: {cart.cart.strIngredient1}</h3>
-          <h3>Category: {cart.cart.strCategory}</h3>
+          <h3>Name: {cart.strIngredient1}</h3>
+          <h3>Category: {cart.strCategory}</h3>
         </div>
 
-        <span>Area: {cart.cart.strArea}</span>
-        <button onClick={()=>handleCartRemove(cart)} className="food-btn">Remove Cart</button>
+        <span>Area: {cart.strArea}</span>
+
+        <button onClick={removeCard} className="food-btn">
+          Remove Cart
+        </button>
       </div>
     </div>
   );

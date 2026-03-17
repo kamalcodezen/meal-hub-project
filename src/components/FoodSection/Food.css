@@ -22,3 +22,8 @@
 
 
 }
+
+.food-color{
+    background-color: rgba(0, 183, 255, 0.482);
+    border: 1.5px solid rgba(0, 0, 255, 0.626)
+}
